@@ -217,5 +217,15 @@ module Jabber
       iq.add(query)
       iq
     end
+    
+    ##
+    # Create a new jabber:iq:privacy Stanza.
+    def Iq.new_privacy
+      iq = Iq.new(:set)
+      query = IqQuery.new
+      query.add_namespace('jabber:iq:privacy')
+      iq.add(query)
+      iq
+    end
   end
 end
